@@ -14,7 +14,7 @@ To create the image `ctlc/serf`, execute the following command on the docker-ser
 Running the Serf agent
 ------------------------
 
-Run the `/run.sh` script to start MySQL (via supervisor):
+Run the `/run.sh` script to start serf (via the Docker supervisor):
 
 	ID=$(sudo docker run -d -p 7946 -p 7373 ctlc/serf /run.sh)
 

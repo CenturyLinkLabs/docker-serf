@@ -1,7 +1,7 @@
 FROM ubuntu:quantal
 MAINTAINER Lucas Carlson <lucas@rufy.com>
 
-# Let's install go in order to build serf
+# Let's get serf
 RUN apt-get update -q
 RUN apt-get install -qy build-essential git supervisor wget unzip
 RUN wget https://dl.bintray.com/mitchellh/serf/0.3.0_linux_amd64.zip
