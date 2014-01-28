@@ -10,7 +10,7 @@ ENV PATH /usr/local/go/bin:$PATH
 ENV GOPATH /usr/local/
 RUN mkdir -p /usr/local/src/github.com/hashicorp/
 RUN git clone https://github.com/hashicorp/serf.git /usr/local/src/github.com/hashicorp/serf
-RUN cd /usr/local/src/github.com/hashicorp/serf && make
+RUN cd /usr/local/src/github.com/hashicorp/serf && git checkout v0.3.0 && make
 RUN mv /usr/local/src/github.com/hashicorp/serf/serf /usr/bin/
 ADD /start.sh /start.sh
 ADD /run.sh /run.sh
