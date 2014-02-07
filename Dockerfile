@@ -3,9 +3,10 @@ MAINTAINER Lucas Carlson <lucas@rufy.com>
 
 # Let's get serf
 RUN apt-get update -q
-RUN apt-get install -qy build-essential git supervisor wget unzip
-RUN wget https://dl.bintray.com/mitchellh/serf/0.3.0_linux_amd64.zip
-RUN unzip 0.3.0_linux_amd64.zip
+RUN apt-get install -qy build-essential git supervisor unzip
+ADD https://dl.bintray.com/mitchellh/serf/0.4.1_linux_amd64.zip serf.zip
+RUN unzip serf.zip
+RUN rm serf.zip
 RUN mv serf /usr/bin/
 ADD /start.sh /start.sh
 ADD /run.sh /run.sh
