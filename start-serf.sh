@@ -1,2 +1,2 @@
 #!/bin/bash
-exec serf agent -role serf-agent
+exec serf agent -tag role=serf-agent
