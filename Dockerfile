@@ -1,10 +1,10 @@
-FROM ubuntu:quantal
+FROM ubuntu:latest
 MAINTAINER Lucas Carlson <lucas@rufy.com>
 
 # Let's get serf
 RUN apt-get update -q
 RUN apt-get install -qy build-essential git supervisor unzip
-ADD https://dl.bintray.com/mitchellh/serf/0.5.0_linux_amd64.zip serf.zip
+ADD https://releases.hashicorp.com/serf/0.7.0/serf_0.7.0_linux_amd64.zip serf.zip
 RUN unzip serf.zip
 RUN rm serf.zip
 RUN mv serf /usr/bin/

@@ -1,2 +1,2 @@
 #!/bin/bash
-exec serf agent -tag role=serf-agent
+exec serf agent -rpc-addr=:7373 -tag role=serf-agent
